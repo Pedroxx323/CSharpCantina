@@ -93,6 +93,26 @@ namespace Cantina
             btnCadastrar.Enabled = true;
 
         }
+        //criando metodos desabilitar campos
+        public void LimparCampos()
+        {
+            txtCodigo.Clear();
+            txtNome.Clear();
+            txtEndereco.Clear();
+            txtNumero.Clear();
+            txtEmail.Clear();
+            txtBairro.Clear();
+            txtCidade.Clear();
+            mskCEP.Clear();
+            mskCPF.Clear();
+            mskTelefone.Clear();
+            cbbEstado.Text = "";
+            btnExcluir.Enabled = false;
+            btnLimpar.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnCadastrar.Enabled = false;
+            btnNovo.Enabled = true;
+        }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal abrir = new frmMenuPrincipal();
@@ -124,8 +144,9 @@ namespace Cantina
             }
             else
             {
-                MessageBox.Show("Cadastrado com sucesso.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Cadastrado com sucesso.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 desabilitarCampos();
+                LimparCampos();
             }
         }
     }
