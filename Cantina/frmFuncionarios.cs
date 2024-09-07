@@ -177,5 +177,10 @@ namespace Cantina
         {
             LimparCampos();
         }
+
+        private void mskCEP_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

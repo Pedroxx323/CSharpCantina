@@ -316,6 +316,7 @@ namespace Cantina
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(96, 26);
             this.mskCEP.TabIndex = 7;
+            this.mskCEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCEP_MaskInputRejected);
             this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
             // 
             // lblCEP
